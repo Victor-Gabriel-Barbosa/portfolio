@@ -93,23 +93,23 @@ O foco do projeto foi unir **boa experiência de uso** (animações sutis, tema 
 ```
 portfolio/
 ├── app/
-│   ├── globals.css        # tema, tokens de cor e estilos globais
-│   ├── layout.tsx         # layout raiz, fontes e metadata
-│   └── page.tsx           # composição das seções da home
+│   ├── globals.css             # tema, tokens de cor e estilos globais
+│   ├── layout.tsx              # layout raiz, fontes e metadata
+│   └── page.tsx                # composição das seções da home
 ├── components/
-│   ├── sections/          # hero, about, projects, skills, experience, contact
-│   ├── ui/                # componentes shadcn/ui + Magic UI
-│   ├── contact-form.tsx   # formulário de contato com validação
-│   ├── project-card.tsx   # card de projeto no grid
-│   ├── project-details.tsx# case study completo do projeto
-│   └── navbar.tsx / footer.tsx
+│   ├── sections/               # hero, about, projects, skills, experience, contact
+│   ├── ui/                     # componentes shadcn/ui + Magic UI
+│   ├── contact-form.tsx        # formulário de contato com validação
+│   ├── project-card.tsx        # card de projeto no grid
+│   ├── project-details.tsx     # case study completo do projeto
+│   └── navbar.tsx / footer.tsx # barra de navegação e rodapé
 ├── lib/
-│   ├── content.ts         # skills, timeline, stats e links sociais
-│   ├── projects.ts        # dados dos projetos em destaque
-│   ├── types.ts            # tipagens compartilhadas
+│   ├── content.ts              # skills, timeline, stats e links sociais
+│   ├── projects.ts             # dados dos projetos em destaque
+│   ├── types.ts                # tipagens compartilhadas
 │   └── utils.ts
-├── public/                 # imagens dos projetos e assets estáticos
-├── components.json         # configuração do shadcn/ui
+├── public/                     # imagens dos projetos e assets estáticos
+├── components.json             # configuração do shadcn/ui
 └── package.json
 ```
 
@@ -139,7 +139,7 @@ Abra [http://localhost:3000](http://localhost:3000) para ver o resultado.
 | `npm run build` | Gera a build de produção otimizada |
 | `npm run start` | Serve a build de produção já gerada |
 
-## 🗂️ Projetos em destaque
+## 🏆 Projetos em destaque
 
 Alguns dos projetos apresentados no portfólio:
 
@@ -176,7 +176,7 @@ Alguns dos projetos apresentados no portfólio:
 
 > Os case studies completos (problema, funcionalidades, desafios, soluções e resultados) estão disponíveis no [portfólio](https://portfolio-victor-gabriel.vercel.app/#projetos).
 
-## 👨‍💻 Sobre o autor
+## 👤 Sobre o autor
 
 Estudante de **Sistemas de Informação** na Universidade Federal de Uberlândia (UFU), com foco em desenvolvimento **Full Stack** e interesse crescente em **Inteligência Artificial aplicada**.
 
@@ -185,7 +185,7 @@ Estudante de **Sistemas de Informação** na Universidade Federal de Uberlândia
 - 📜 Certificação em Cloud Services com Swift — Instituto de Pesquisas Eldorado
 - 🧩 Stack: TypeScript, JavaScript, React, Next.js, Python, FastAPI, Kotlin, entre outras
 
-## 🗺️ Roadmap
+## 📌 Roadmap
 
 Ideias para próximas iterações do projeto:
 
