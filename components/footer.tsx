@@ -20,7 +20,7 @@ export function Footer() {
             <span className="flex size-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <img src="/icon0.svg" alt="Logo" />
             </span>
-            <span>Victor Barbosa</span>
+            <span>Victor Gabriel</span>
           </a>
 
           <nav aria-label="Rodapé" className="flex flex-wrap items-center gap-1">
@@ -67,7 +67,7 @@ export function Footer() {
         </div>
 
         <p className="border-t border-border pt-6 text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Victor Barbosa. Todos os direitos reservados.
+          &copy; {new Date().getFullYear()} Victor Gabriel. Todos os direitos reservados.
         </p>
       </div>
     </footer>

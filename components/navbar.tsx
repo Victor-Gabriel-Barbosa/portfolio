@@ -80,7 +80,7 @@ export function Navbar() {
             <img src="/icon0.svg" alt="Logo" />
           </span>
 
-          <span>Victor Barbosa</span>
+          <span>Victor Gabriel</span>
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">
