@@ -189,7 +189,7 @@ Estudante de **Sistemas de Informação** na Universidade Federal de Uberlândia
 
 Ideias para próximas iterações do projeto:
 
-- [ ] Integrar envio real de mensagens no formulário de contato (ex.: Resend ou uma API Route)
+- [x] Integrar envio real de mensagens no formulário de contato (ex.: Resend ou uma API Route)
 - [ ] Adicionar testes automatizados de componentes
 - [ ] Disponibilizar versão em inglês (i18n)
 
