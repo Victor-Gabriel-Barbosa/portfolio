@@ -20,7 +20,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 top-0 z-0 h-128 overflow-hidden mask-[linear-gradient(to_bottom,black,transparent)]"
       >
         <Meteors
-          number={24}
+          number={18}
           minDelay={0.2}
           maxDelay={2.4}
           minDuration={3}

@@ -45,10 +45,10 @@ export function ContactForm() {
 
   const handleChange =
     (field: keyof FormState) =>
-    (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setValues((prev) => ({ ...prev, [field]: event.target.value }))
-      setErrors((prev) => ({ ...prev, [field]: undefined }))
-    }
+      (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setValues((prev) => ({ ...prev, [field]: event.target.value }))
+        setErrors((prev) => ({ ...prev, [field]: undefined }))
+      }
 
   const handleSubmit = async (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -57,12 +57,29 @@ export function ContactForm() {
     if (Object.keys(validation).length > 0) return
 
     setSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1200))
-    setSubmitting(false)
-    setValues({ name: "", email: "", message: "" })
-    toast.success("Mensagem enviada!", {
-      description: "Obrigado pelo contato. Responderei em breve.",
-    })
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      })
+
+      if (!response.ok) {
+        throw new Error("Erro no envio")
+      }
+
+      setValues({ name: "", email: "", message: "" })
+      toast.success("Mensagem enviada!", {
+        description: "Obrigado pelo contato. Responderei em breve.",
+      })
+    } catch (err) {
+      toast.error("Erro ao enviar mensagem", {
+        description: "Tente novamente mais tarde ou envie um e-mail direto.",
+      })
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
