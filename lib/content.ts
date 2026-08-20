@@ -3,9 +3,11 @@ import type { SkillCategory, TimelineItem } from "@/lib/types"
 export const skillCategories: SkillCategory[] = [
   { label: "Frontend & Web", skills: ["TypeScript", "JavaScript", "React", "Next.js", "HTML5", "CSS3"] },
   { label: "Backend & Dados", skills: ["Python", "FastAPI", "PostgreSQL", "MySQL", "Supabase", "Firebase"] },
-  { label: "Mobile", skills: ["Kotlin", "Jetpack Compose", "Room"] },
-  { label: "Ferramentas", skills: ["Git", "GitHub", "VS Code", "IntelliJ IDEA", "NetBeans"] },
-  { label: "Familiaridade adicional", skills: ["Java", "C", "C++", "PHP", "Swift", "SwiftUI", "React Native"] },
+  { label: "Mobile", skills: ["Kotlin", "Jetpack Compose", "Room", "SwiftUI"] },
+  { label: "Ferramentas & IDEs", skills: ["VS Code", "IntelliJ IDEA", "Android Studio", "NetBeans"] },
+  { label: "Linguagens de programação", skills: ["Java", "C", "C++", "PHP", "Swift", "React Native"] },
+  { label: "DevOps & Cloud", skills: ["Git", "GitHub", "Docker", "Vercel", "Linux", "CI/CD"] },
+  
 ]
 
 export const timeline: TimelineItem[] = [
@@ -69,8 +71,8 @@ export const timeline: TimelineItem[] = [
 
 export const stats = [
   { value: "4", label: "Projetos completos publicados" },
-  { value: "50+", label: "Repositórios no GitHub" },
-  { value: "3+", label: "Anos cursando Sistemas de Informação" },
+  { value: "50", label: "Repositórios no GitHub" },
+  { value: "3", label: "Anos cursando Sistemas de Informação" },
 ]
 
 export const highlights = [

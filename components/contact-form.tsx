@@ -50,14 +50,13 @@ export function ContactForm() {
       setErrors((prev) => ({ ...prev, [field]: undefined }))
     }
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault()
     const validation = validate(values)
     setErrors(validation)
     if (Object.keys(validation).length > 0) return
 
     setSubmitting(true)
-    // Simula envio — substitua por uma chamada real de API / server action.
     await new Promise((resolve) => setTimeout(resolve, 1200))
     setSubmitting(false)
     setValues({ name: "", email: "", message: "" })

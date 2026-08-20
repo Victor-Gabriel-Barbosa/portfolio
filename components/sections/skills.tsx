@@ -1,17 +1,19 @@
 import { Card } from "@/components/ui/card"
+import { MagicCard } from "@/components/ui/magic-card"
 import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
 import { TechBadge } from "@/components/tech-badge"
 import { skillCategories } from "@/lib/content"
-import { Database, Layers, Server, Wrench, Smartphone, CodeXml } from "lucide-react"
+import { Database, Layers, Server, Wrench, Smartphone, CodeXml, CloudCog } from "lucide-react"
 
 const categoryIcons: Record<string, typeof Layers> = {
   Frontend: Layers,
   "Backend & Dados": Server,
   Mobile: Smartphone,
-  "Familiaridade adicional": CodeXml,
+  "Linguagens de programação": CodeXml,
   "Banco de dados": Database,
-  Ferramentas: Wrench,
+  "Ferramentas & IDEs": Wrench,
+  "DevOps & Cloud": CloudCog
 }
 
 export function Skills() {
@@ -31,16 +33,21 @@ export function Skills() {
           const Icon = categoryIcons[category.label] ?? Layers
           return (
             <Reveal key={category.label} delay={index * 80} className="flex">
-              <Card className="flex w-full flex-col gap-4 p-6 transition-colors hover:border-primary/40">
-                <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <Icon className="size-5" aria-hidden="true" />
-                </span>
-                <h3 className="text-base font-semibold">{category.label}</h3>
-                <div className="flex flex-wrap gap-1.5">
-                  {category.skills.map((skill) => (
-                    <TechBadge key={skill} label={skill} />
-                  ))}
-                </div>
+              <Card className="flex h-full w-full max-w-sm flex-col border-none p-0 shadow-none">
+                <MagicCard
+                  gradientColor={"var(--accent)"}
+                  className="flex h-full w-full flex-col justify-start gap-4 p-6"
+                >
+                  <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <Icon className="size-5" aria-hidden="true" />
+                  </span>
+                  <h3 className="text-base font-semibold">{category.label}</h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {category.skills.map((skill) => (
+                      <TechBadge key={skill} label={skill} />
+                    ))}
+                  </div>
+                </MagicCard>
               </Card>
             </Reveal>
           )

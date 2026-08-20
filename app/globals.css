@@ -65,7 +65,15 @@
   0%, 49% {
     opacity: 1;}
   50%, 100% {
-    opacity: 0;}}}
+    opacity: 0;}}
+  --animate-shine: shine var(--duration) infinite linear;
+  @keyframes shine {
+  0% {
+    background-position: 0% 0%;}
+  50% {
+    background-position: 100% 100%;}
+  to {
+    background-position: 0% 0%;}}}
 
 :root {
   color-scheme: light;
@@ -138,6 +146,24 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+  background-clip: padding-box;
+}
+
+* {
+  scrollbar-color: var(--primary) transparent;
+  scrollbar-width: inherit;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -150,6 +176,10 @@
   }
   section[id] {
     scroll-margin-top: 5rem;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
 

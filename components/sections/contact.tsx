@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { ShineBorder } from "@/components/ui/shine-border"
 import { ContactForm } from "@/components/contact-form"
 import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
@@ -54,6 +55,7 @@ export function Contact() {
 
         <Reveal delay={120}>
           <Card className="p-6 sm:p-8">
+            <ShineBorder shineColor={["var(--color-primary)", "var(--color-primary)", "var(--color-primary)"]} />
             <ContactForm />
           </Card>
         </Reveal>

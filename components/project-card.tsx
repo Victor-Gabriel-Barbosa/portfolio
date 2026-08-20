@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { MagicCard } from "@/components/ui/magic-card"
 import { TechBadge } from "@/components/tech-badge"
 import type { Project } from "@/lib/types"
 import { Github } from "@/components/brand-icons"
@@ -13,7 +14,11 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onOpen }: Readonly<ProjectCardProps>) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5">
+    <MagicCard
+      gradientSize={350}
+      gradientColor="var(--accent)"
+      className="group flex h-full flex-col overflow-hidden p-0 transition-all duration-300 rounded-xl"
+    >
       <button
         type="button"
         onClick={() => onOpen(project)}
@@ -25,10 +30,6 @@ export function ProjectCard({ project, onOpen }: Readonly<ProjectCardProps>) {
           alt={`Preview da interface do projeto ${project.title}`}
           className="size-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
           loading="lazy"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-linear-to-t from-background/70 via-background/0 to-background/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         />
         {project.featured ? (
           <span className="absolute left-3 bottom-3 inline-flex items-center gap-1 rounded-full border border-primary/30 bg-background/80 px-2.5 py-1 text-xs font-medium text-primary backdrop-blur">
@@ -76,6 +77,6 @@ export function ProjectCard({ project, onOpen }: Readonly<ProjectCardProps>) {
           </Button>
         </div>
       </div>
-    </article>
+    </MagicCard>
   )
 }

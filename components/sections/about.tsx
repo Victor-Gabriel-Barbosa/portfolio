@@ -1,4 +1,6 @@
 import { Card } from "@/components/ui/card"
+import { NumberTicker } from "@/components/ui/number-ticker"
+import { ShineBorder } from "@/components/ui/shine-border"
 import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
 import { highlights, stats } from "@/lib/content"
@@ -33,6 +35,7 @@ export function About() {
 
         <Reveal delay={120}>
           <Card className="relative overflow-hidden p-8">
+            <ShineBorder shineColor={["var(--color-primary)", "var(--color-primary)", "var(--color-primary)"]} />
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full bg-primary/10 blur-2xl"
@@ -43,7 +46,7 @@ export function About() {
                 {stats.map((stat) => (
                   <div key={stat.label} className="flex flex-col gap-1">
                     <span className="text-4xl font-semibold tracking-tight text-primary">
-                      {stat.value}
+                      <NumberTicker value={Number(stat.value)} className="text-primary!" />+
                     </span>
                     <span className="text-sm leading-snug text-muted-foreground">
                       {stat.label}

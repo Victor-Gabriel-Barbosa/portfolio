@@ -80,7 +80,7 @@ export function Navbar() {
             <img src="/icon0.svg" alt="Logo" />
           </span>
 
-          <span>Victor Gabriel</span>
+          <span>Victor Barbosa</span>
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -93,7 +93,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   className={cn(
-                    "rounded-md px-3 py-2 text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    "rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                     isActive
                       ? "text-primary"
                       : "text-muted-foreground hover:text-foreground",

@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Victor Gabriel - Dev Full Stack',
+  title: 'Victor Barbosa - Dev Full Stack',
   description:
-    'Portfólio de Victor Gabriel, estudante de Sistemas de Informação e desenvolvedor Full Stack focado em aplicações web modernas, performáticas e escaláveis.',
+    'Portfólio de Victor Barbosa, estudante de Sistemas de Informação e desenvolvedor Full Stack focado em aplicações web modernas, performáticas e escaláveis.',
   keywords: [
     'desenvolvedor',
     'full stack',
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     'Next.js',
     'React',
     'TypeScript',
-    'Victor Gabriel',
+    'Victor Barbosa',
   ],
-  authors: [{ name: 'Victor Gabriel' }],
+  authors: [{ name: 'Victor Barbosa' }],
   openGraph: {
-    title: 'Victor Gabriel - Desenvolvedor Full Stack',
+    title: 'Victor Barbosa - Desenvolvedor Full Stack',
     description:
       'Portfólio profissional apresentando projetos de desenvolvimento de software.',
     type: 'website',

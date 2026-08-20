@@ -20,7 +20,7 @@ export function CodeWindow({ className }: Readonly<{ className?: string }>) {
         <span>
           <span className="text-chart-2">nome</span>
           <span className="text-muted-foreground">: </span>
-          <span className="text-primary">'Victor Gabriel'</span>
+          <span className="text-primary">'Victor Barbosa'</span>
           <span className="text-muted-foreground">,</span>
         </span>
       </AnimatedSpan>
@@ -40,7 +40,7 @@ export function CodeWindow({ className }: Readonly<{ className?: string }>) {
           <span className="text-muted-foreground">: [</span>
           <span className="text-primary">'Full Stack'</span>
           <span className="text-muted-foreground">, </span>
-          <span className="text-primary">'IA'</span>
+          <span className="text-primary">'Mobile'</span>
           <span className="text-muted-foreground">],</span>
         </span>
       </AnimatedSpan>
