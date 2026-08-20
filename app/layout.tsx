@@ -16,7 +16,11 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Victor Barbosa - Dev Full Stack',
+  metadataBase: new URL('https://portfolio-victor-gabriel.vercel.app/'),
+  title: {
+    default: 'Victor Barbosa - Dev Full Stack',
+    template: '%s | Victor Barbosa',
+  },
   description:
     'Portfólio de Victor Barbosa, estudante de Sistemas de Informação e desenvolvedor Full Stack focado em aplicações web modernas, performáticas e escaláveis.',
   keywords: [
@@ -29,12 +33,23 @@ export const metadata: Metadata = {
     'Victor Barbosa',
   ],
   authors: [{ name: 'Victor Barbosa' }],
+  creator: 'Victor Barbosa',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title: 'Victor Barbosa - Desenvolvedor Full Stack',
     description:
       'Portfólio profissional apresentando projetos de desenvolvimento de software.',
-    type: 'website',
+    url: 'https://seu-portfolio.vercel.app',
+    siteName: 'Victor Barbosa',
     locale: 'pt_BR',
+    type: 'website',
   },
 }
 
