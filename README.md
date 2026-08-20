@@ -24,12 +24,12 @@ Portfólio profissional desenvolvido com **Next.js 16**, **React 19** e **TypeSc
 ## 📋 Índice
 
 - [Sobre o projeto](#-sobre-o-projeto)
+- [Capturas de tela](#-capturas-de-tela)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias](#-tecnologias)
 - [Estrutura do projeto](#-estrutura-do-projeto)
 - [Como executar localmente](#-como-executar-localmente)
 - [Scripts disponíveis](#-scripts-disponíveis)
-- [Projetos em destaque](#-projetos-em-destaque)
 - [Sobre o autor](#-sobre-o-autor)
 - [Roadmap](#-roadmap)
 - [Contato](#-contato)
@@ -53,6 +53,37 @@ O foco do projeto foi unir **boa experiência de uso** (animações sutis, tema 
 | **Skills** | Tecnologias organizadas por categoria (Frontend, Backend, Mobile, Ferramentas) |
 | **Trajetória** | Linha do tempo com formação acadêmica, monitorias, certificações e projetos autorais |
 | **Contato** | Formulário validado + links diretos para e-mail, GitHub e LinkedIn |
+
+## 📸 Capturas de tela
+
+<table>
+<tr>
+<td width="50%">
+<img src="./screenshots/portfolio_home.jpg" width="100%" alt="Seção Início" />
+<p align="center"><sub><strong>Início</strong></sub></p>
+</td>
+<td width="50%">
+<img src="./screenshots/portfolio_about.jpg" width="100%" alt="Seção Sobre" />
+<p align="center"><sub><strong>Sobre</strong></sub></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<img src="./screenshots/portfolio_projects.jpg" width="100%" alt="Seção Projetos" />
+<p align="center"><sub><strong>Projetos</strong></sub></p>
+</td>
+<td width="50%">
+<img src="./screenshots/portfolio_technologies.jpg" width="100%" alt="Seção Skills" />
+<p align="center"><sub><strong>Skills</strong></sub></p>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<img src="./screenshots/portfolio_experience.jpg" width="50%" alt="Seção Trajetória" />
+<p align="center"><sub><strong>Trajetória</strong></sub></p>
+</td>
+</tr>
+</table>
 
 ## 🚀 Funcionalidades
 
@@ -109,6 +140,7 @@ portfolio/
 │   ├── types.ts                # tipagens compartilhadas
 │   └── utils.ts
 ├── public/                     # imagens dos projetos e assets estáticos
+├── screenshots/                # capturas de tela usadas neste README
 ├── components.json             # configuração do shadcn/ui
 └── package.json
 ```
@@ -138,43 +170,6 @@ Abra [http://localhost:3000](http://localhost:3000) para ver o resultado.
 | `npm run dev` | Inicia o servidor local em modo desenvolvimento |
 | `npm run build` | Gera a build de produção otimizada |
 | `npm run start` | Serve a build de produção já gerada |
-
-## 🏆 Projetos em destaque
-
-Alguns dos projetos apresentados no portfólio:
-
-<table>
-<tr>
-<td width="50%">
-<img src="https://raw.githubusercontent.com/Victor-Gabriel-Barbosa/portfolio/main/public/chatgpu_home.jpg" width="100%" alt="ChatGPU" /><br/>
-<strong>ChatGPU</strong> — Chat de IA rodando 100% no navegador via WebLLM (MLC), com aceleração por GPU quando disponível.<br/>
-<sub>TypeScript · Node.js · WebLLM</sub><br/>
-<a href="https://github.com/Victor-Gabriel-Barbosa/chatgpu">🔗 código-fonte</a>
-</td>
-<td width="50%">
-<img src="https://raw.githubusercontent.com/Victor-Gabriel-Barbosa/portfolio/main/public/promohubs_home.jpg" width="100%" alt="PromoHubs" /><br/>
-<strong>PromoHubs</strong> — Ecossistema com bot de Telegram (OCR de notas fiscais) e API REST com scrapers, agregando promoções de Telegram, Kabum e Steam.<br/>
-<sub>Python · FastAPI · Telethon · Playwright</sub><br/>
-<a href="https://github.com/Victor-Gabriel-Barbosa/FrontendPromohubs">🔗 código-fonte</a>
-</td>
-</tr>
-<tr>
-<td width="50%">
-<img src="https://raw.githubusercontent.com/Victor-Gabriel-Barbosa/portfolio/main/public/echo_home.jpg" width="100%" alt="Echo" /><br/>
-<strong>Echo</strong> — App Android para registro e compartilhamento de itens perdidos e achados, com mapa interativo, chat em tempo real e notificações push.<br/>
-<sub>Kotlin · Firebase · Maps SDK</sub><br/>
-<a href="https://github.com/Victor-Gabriel-Barbosa/Echo">🔗 código-fonte</a>
-</td>
-<td width="50%">
-<img src="https://raw.githubusercontent.com/Victor-Gabriel-Barbosa/portfolio/main/public/indibox_home.jpg" width="100%" alt="IndiBox" /><br/>
-<strong>IndiBox</strong> — Plataforma web inspirada no itch.io para divulgação e descoberta de jogos indie gratuitos.<br/>
-<sub>TypeScript · Next.js · Supabase</sub><br/>
-<a href="https://github.com/Victor-Gabriel-Barbosa/indibox">🔗 código-fonte</a>
-</td>
-</tr>
-</table>
-
-> Os case studies completos (problema, funcionalidades, desafios, soluções e resultados) estão disponíveis no [portfólio](https://portfolio-victor-gabriel.vercel.app/#projetos).
 
 ## 👤 Sobre o autor
 
