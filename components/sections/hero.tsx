@@ -40,8 +40,7 @@ export function Hero() {
 
           <Reveal delay={80}>
             <h1 className="text-balance font-semibold leading-[1.1] tracking-tight text-4xl sm:text-5xl lg:text-6xl">
-              Transformando ideias em{" "}
-              <br />
+              Transformando <br /> ideias em <br />
               <TypingAnimation
                 words={["produtos.", "código.", "experiências.", "soluções."]}
                 pauseDelay={2000}

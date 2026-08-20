@@ -28,27 +28,25 @@ export function Skills() {
         />
       </Reveal>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category, index) => {
           const Icon = categoryIcons[category.label] ?? Layers
           return (
-            <Reveal key={category.label} delay={index * 80} className="flex">
-              <Card className="flex h-full w-full max-w-sm flex-col border-none p-0 shadow-none">
-                <MagicCard
-                  gradientColor={"var(--accent)"}
-                  className="flex h-full w-full flex-col justify-start gap-4 p-6"
-                >
-                  <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Icon className="size-5" aria-hidden="true" />
-                  </span>
-                  <h3 className="text-base font-semibold">{category.label}</h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {category.skills.map((skill) => (
-                      <TechBadge key={skill} label={skill} />
-                    ))}
-                  </div>
-                </MagicCard>
-              </Card>
+            <Reveal key={category.label} delay={index * 80} className="flex w-full justify-center">
+              <MagicCard
+                gradientColor={"var(--accent)"}
+                className="flex h-full w-full flex-col justify-start gap-4 p-6 rounded-xl"
+              >
+                <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Icon className="size-5" aria-hidden="true" />
+                </span>
+                <h3 className="text-base font-semibold">{category.label}</h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {category.skills.map((skill) => (
+                    <TechBadge key={skill} label={skill} />
+                  ))}
+                </div>
+              </MagicCard>
             </Reveal>
           )
         })}
