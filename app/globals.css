@@ -159,9 +159,20 @@
   background-clip: padding-box;
 }
 
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
 * {
   scrollbar-color: var(--primary) transparent;
   scrollbar-width: inherit;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
 @layer base {
