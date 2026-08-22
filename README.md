@@ -78,9 +78,13 @@ O foco do projeto foi unir **boa experiência de uso** (animações sutis, tema 
 </td>
 </tr>
 <tr>
-<td colspan="2" align="center">
-<img src="./screenshots/portfolio_experience.jpg" width="50%" alt="Seção Trajetória" />
+<td width="50%">
+<img src="./screenshots/portfolio_experience.jpg" width="100%" alt="Seção Trajetória" />
 <p align="center"><sub><strong>Trajetória</strong></sub></p>
+</td>
+<td width="50%">
+<img src="./screenshots/portfolio_contact.jpg" width="100%" alt="Seção Contato" />
+<p align="center"><sub><strong>Contato</strong></sub></p>
 </td>
 </tr>
 </table>
