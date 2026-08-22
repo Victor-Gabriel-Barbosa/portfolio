@@ -130,6 +130,9 @@ cd portfolio
 # 2. Instale as dependências
 npm install
 
+# 3. Configure as variáveis de ambiente
+Copie o .env.example para .env e preencha com as credenciais do seu projeto
+
 # 3. Rode o servidor de desenvolvimento
 npm run dev
 ```
