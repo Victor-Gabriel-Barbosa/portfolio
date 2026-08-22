@@ -1,0 +1,57 @@
+name: Update README Screenshot
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "screenshots/**"
+
+permissions:
+  contents: write
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Build
+        run: npm run build
+
+      - name: Start application
+        run: npm run start &
+
+      - name: Wait for application
+        run: npx wait-on http://localhost:3000
+
+      - name: Generate screenshot
+        run: npm run screenshot
+
+      - name: Commit screenshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add screenshots/home.png
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update README screenshot"
+            git push
+          fi
