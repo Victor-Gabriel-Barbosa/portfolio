@@ -24,7 +24,7 @@ Portfólio profissional desenvolvido com **Next.js 16**, **React 19** e **TypeSc
 ## 📋 Índice
 
 - [Sobre o projeto](#-sobre-o-projeto)
-- [Capturas de tela](#-capturas-de-tela)
+- [Preview](#-preview)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias](#-tecnologias)
 - [Estrutura do projeto](#-estrutura-do-projeto)
@@ -54,40 +54,9 @@ O foco do projeto foi unir **boa experiência de uso** (animações sutis, tema 
 | **Trajetória** | Linha do tempo com formação acadêmica, monitorias, certificações e projetos autorais |
 | **Contato** | Formulário validado + links diretos para e-mail, GitHub e LinkedIn |
 
-## 📸 Capturas de tela
+## 📸 Preview
 
-<table>
-<tr>
-<td width="50%">
-<img src="./screenshots/portfolio_home.jpg" width="100%" alt="Seção Início" />
-<p align="center"><sub><strong>Início</strong></sub></p>
-</td>
-<td width="50%">
-<img src="./screenshots/portfolio_about.jpg" width="100%" alt="Seção Sobre" />
-<p align="center"><sub><strong>Sobre</strong></sub></p>
-</td>
-</tr>
-<tr>
-<td width="50%">
-<img src="./screenshots/portfolio_projects.jpg" width="100%" alt="Seção Projetos" />
-<p align="center"><sub><strong>Projetos</strong></sub></p>
-</td>
-<td width="50%">
-<img src="./screenshots/portfolio_technologies.jpg" width="100%" alt="Seção Skills" />
-<p align="center"><sub><strong>Skills</strong></sub></p>
-</td>
-</tr>
-<tr>
-<td width="50%">
-<img src="./screenshots/portfolio_experience.jpg" width="100%" alt="Seção Trajetória" />
-<p align="center"><sub><strong>Trajetória</strong></sub></p>
-</td>
-<td width="50%">
-<img src="./screenshots/portfolio_contact.jpg" width="100%" alt="Seção Contato" />
-<p align="center"><sub><strong>Contato</strong></sub></p>
-</td>
-</tr>
-</table>
+<img src="./screenshots/home.png" width="100%" alt="Seção Início" />
 
 ## 🚀 Funcionalidades
 
