@@ -107,31 +107,31 @@ portfolio/
 │   ├── layout.tsx              # layout raiz, fontes e metadata
 │   └── page.tsx                # composição das seções da home
 ├── components/
-│   ├── sections/                # hero, about, projects, skills, experience, contact
-│   ├── ui/                      # componentes shadcn/ui + Magic UI
-│   ├── brand-icons.tsx          # ícones das marcas/tecnologias
-│   ├── code-window.tsx          # janela de código estilizada do hero
-│   ├── contact-form.tsx         # formulário de contato com validação
-│   ├── footer.tsx               # rodapé
-│   ├── navbar.tsx               # barra de navegação
-│   ├── project-card.tsx         # card de projeto no grid
-│   ├── project-details.tsx      # case study completo do projeto
-│   ├── project-grid.tsx         # grid de projetos em destaque
-│   ├── reveal.tsx               # animação de entrada ao rolar a página
-│   ├── section-heading.tsx      # cabeçalho padrão das seções
-│   ├── tech-badge.tsx           # badge de tecnologia utilizada
-│   └── theme-provider.tsx       # provedor de tema claro/escuro
+│   ├── sections/               # hero, about, projects, skills, experience, contact
+│   ├── ui/                     # componentes shadcn/ui + Magic UI
+│   ├── brand-icons.tsx         # ícones das marcas/tecnologias
+│   ├── code-window.tsx         # janela de código estilizada do hero
+│   ├── contact-form.tsx        # formulário de contato com validação
+│   ├── footer.tsx              # rodapé
+│   ├── navbar.tsx              # barra de navegação
+│   ├── project-card.tsx        # card de projeto no grid
+│   ├── project-details.tsx     # case study completo do projeto
+│   ├── project-grid.tsx        # grid de projetos em destaque
+│   ├── reveal.tsx              # animação de entrada ao rolar a página
+│   ├── section-heading.tsx     # cabeçalho padrão das seções
+│   ├── tech-badge.tsx          # badge de tecnologia utilizada
+│   └── theme-provider.tsx      # provedor de tema claro/escuro
 ├── lib/
-│   ├── content.ts                # skills, timeline, stats e links sociais
-│   ├── projects.ts               # dados dos projetos em destaque
-│   ├── types.ts                  # tipagens compartilhadas
+│   ├── content.ts              # skills, timeline, stats e links sociais
+│   ├── projects.ts             # dados dos projetos em destaque
+│   ├── types.ts                # tipagens compartilhadas
 │   └── utils.ts
-├── public/                       # imagens dos projetos, ícones e assets estáticos
-├── screenshots/                  # capturas de tela usadas neste README
+├── public/                     # imagens dos projetos, ícones e assets estáticos
+├── screenshots/                # capturas de tela usadas neste README
 ├── scripts/
-│   └── screenshot.ts             # gera o print da home via Playwright
-├── .env.example                  # modelo das variáveis de ambiente (Resend, etc.)
-├── components.json               # configuração do shadcn/ui
+│   └── screenshot.ts           # gera o print da home via Playwright
+├── .env.example                # modelo das variáveis de ambiente (Resend, etc.)
+├── components.json             # configuração do shadcn/ui
 └── package.json
 ```
 
