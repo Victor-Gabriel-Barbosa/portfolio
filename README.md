@@ -24,7 +24,7 @@ Portfólio profissional desenvolvido com **Next.js 16**, **React 19** e **TypeSc
 ## 📋 Índice
 
 - [Sobre o projeto](#-sobre-o-projeto)
-- [Capturas de tela](#-capturas-de-tela)
+- [Preview](#-preview)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias](#-tecnologias)
 - [Estrutura do projeto](#-estrutura-do-projeto)
@@ -54,40 +54,9 @@ O foco do projeto foi unir **boa experiência de uso** (animações sutis, tema 
 | **Trajetória** | Linha do tempo com formação acadêmica, monitorias, certificações e projetos autorais |
 | **Contato** | Formulário validado + links diretos para e-mail, GitHub e LinkedIn |
 
-## 📸 Capturas de tela
+## 📸 Preview
 
-<table>
-<tr>
-<td width="50%">
-<img src="./screenshots/portfolio_home.jpg" width="100%" alt="Seção Início" />
-<p align="center"><sub><strong>Início</strong></sub></p>
-</td>
-<td width="50%">
-<img src="./screenshots/portfolio_about.jpg" width="100%" alt="Seção Sobre" />
-<p align="center"><sub><strong>Sobre</strong></sub></p>
-</td>
-</tr>
-<tr>
-<td width="50%">
-<img src="./screenshots/portfolio_projects.jpg" width="100%" alt="Seção Projetos" />
-<p align="center"><sub><strong>Projetos</strong></sub></p>
-</td>
-<td width="50%">
-<img src="./screenshots/portfolio_technologies.jpg" width="100%" alt="Seção Skills" />
-<p align="center"><sub><strong>Skills</strong></sub></p>
-</td>
-</tr>
-<tr>
-<td width="50%">
-<img src="./screenshots/portfolio_experience.jpg" width="100%" alt="Seção Trajetória" />
-<p align="center"><sub><strong>Trajetória</strong></sub></p>
-</td>
-<td width="50%">
-<img src="./screenshots/portfolio_contact.jpg" width="100%" alt="Seção Contato" />
-<p align="center"><sub><strong>Contato</strong></sub></p>
-</td>
-</tr>
-</table>
+<img src="./screenshots/home.png" width="100%" alt="Seção Início" />
 
 ## 🚀 Funcionalidades
 
@@ -127,24 +96,41 @@ O foco do projeto foi unir **boa experiência de uso** (animações sutis, tema 
 
 ```
 portfolio/
+├── .github/
+│   └── workflows/
+│       └── screenshot.yml      # Action que atualiza o print da home a cada push
 ├── app/
+│   ├── api/
+│   │   └── send/
+│   │       └── route.ts        # API Route que envia o e-mail do formulário (Resend)
 │   ├── globals.css             # tema, tokens de cor e estilos globais
 │   ├── layout.tsx              # layout raiz, fontes e metadata
 │   └── page.tsx                # composição das seções da home
 ├── components/
 │   ├── sections/               # hero, about, projects, skills, experience, contact
 │   ├── ui/                     # componentes shadcn/ui + Magic UI
+│   ├── brand-icons.tsx         # ícones das marcas/tecnologias
+│   ├── code-window.tsx         # janela de código estilizada do hero
 │   ├── contact-form.tsx        # formulário de contato com validação
+│   ├── footer.tsx              # rodapé
+│   ├── navbar.tsx              # barra de navegação
 │   ├── project-card.tsx        # card de projeto no grid
 │   ├── project-details.tsx     # case study completo do projeto
-│   └── navbar.tsx / footer.tsx # barra de navegação e rodapé
+│   ├── project-grid.tsx        # grid de projetos em destaque
+│   ├── reveal.tsx              # animação de entrada ao rolar a página
+│   ├── section-heading.tsx     # cabeçalho padrão das seções
+│   ├── tech-badge.tsx          # badge de tecnologia utilizada
+│   └── theme-provider.tsx      # provedor de tema claro/escuro
 ├── lib/
 │   ├── content.ts              # skills, timeline, stats e links sociais
 │   ├── projects.ts             # dados dos projetos em destaque
 │   ├── types.ts                # tipagens compartilhadas
 │   └── utils.ts
-├── public/                     # imagens dos projetos e assets estáticos
+├── public/                     # imagens dos projetos, ícones e assets estáticos
 ├── screenshots/                # capturas de tela usadas neste README
+├── scripts/
+│   └── screenshot.ts           # gera o print da home via Playwright
+├── .env.example                # modelo das variáveis de ambiente (Resend, etc.)
 ├── components.json             # configuração do shadcn/ui
 └── package.json
 ```
@@ -160,6 +146,9 @@ cd portfolio
 
 # 2. Instale as dependências
 npm install
+
+# 3. Configure as variáveis de ambiente
+Copie o .env.example para .env e preencha com as credenciais do seu projeto
 
 # 3. Rode o servidor de desenvolvimento
 npm run dev
