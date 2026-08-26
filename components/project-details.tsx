@@ -227,7 +227,7 @@ export function ProjectDetails({ project, open, onOpenChange, onPrev, onNext }: 
           if (!isOpen) setSelectedShot(null)
         }}
       >
-        <DialogContent className="flex h-[92vh] w-[calc(100vw-2rem)] max-w-7xl items-center justify-center border-border/60 bg-background/95 p-4 backdrop-blur-xl sm:p-8">
+        <DialogContent className="w-auto max-w-[95vw]! max-h-[95vh] overflow-hidden border-border/60 bg-background/95 p-4 backdrop-blur-xl sm:p-6">
           <DialogTitle className="sr-only">
             {selectedShot?.alt ?? "Imagem ampliada"}
           </DialogTitle>
@@ -235,11 +235,10 @@ export function ProjectDetails({ project, open, onOpenChange, onPrev, onNext }: 
             Visualização em tela cheia da imagem selecionada.
           </DialogDescription>
           {selectedShot ? (
-            // eslint-disable-next-line @next/next/no-img-element
             <img
               src={selectedShot.src}
               alt={selectedShot.alt}
-              className="max-h-full max-w-full rounded-lg object-contain"
+              className="block max-h-[calc(95vh-2rem)] max-w-full rounded-lg object-contain"
             />
           ) : null}
         </DialogContent>
