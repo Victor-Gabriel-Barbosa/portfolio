@@ -16,8 +16,9 @@ export interface Project {
   results: string[]
   image: string
   gallery: ProjectImage[]
-  demoUrl: string
-  githubUrl: string
+  demoUrl?: string
+  previewUrl?: string
+  githubUrl?: string
   featured: boolean
   year: string
 }

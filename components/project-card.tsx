@@ -5,7 +5,7 @@ import { MagicCard } from "@/components/ui/magic-card"
 import { TechBadge } from "@/components/tech-badge"
 import type { Project } from "@/lib/types"
 import { Github } from "@/components/brand-icons"
-import { ArrowUpRight, Star } from "lucide-react"
+import { ArrowUpRight, ExternalLink, Star } from "lucide-react"
 
 interface ProjectCardProps {
   project: Project
@@ -13,6 +13,9 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onOpen }: Readonly<ProjectCardProps>) {
+  const previewUrl =
+    project.previewUrl || (project.demoUrl && project.demoUrl !== "#" ? project.demoUrl : undefined)
+
   return (
     <MagicCard
       gradientSize={350}
@@ -62,19 +65,32 @@ export function ProjectCard({ project, onOpen }: Readonly<ProjectCardProps>) {
           ) : null}
         </div>
 
-        <div className="mt-auto flex items-center gap-2 pt-1">
+        <div className="mt-auto flex flex-wrap items-center gap-2 pt-1">
           <Button size="sm" onClick={() => onOpen(project)}>
             Ver projeto
           </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            nativeButton={false}
-            render={<a href={project.githubUrl} target="_blank" rel="noopener noreferrer" />}
-          >
-            <Github data-icon="inline-start" aria-hidden="true" />
-            Código
-          </Button>
+          {previewUrl ? (
+            <Button
+              size="sm"
+              variant="outline"
+              nativeButton={false}
+              render={<a href={previewUrl} target="_blank" rel="noopener noreferrer" />}
+            >
+              <ExternalLink data-icon="inline-start" aria-hidden="true" />
+              Demo
+            </Button>
+          ) : null}
+          {project.githubUrl && project.githubUrl !== "#" ? (
+            <Button
+              size="sm"
+              variant="outline"
+              nativeButton={false}
+              render={<a href={project.githubUrl} target="_blank" rel="noopener noreferrer" />}
+            >
+              <Github data-icon="inline-start" aria-hidden="true" />
+              Código
+            </Button>
+          ) : null}
         </div>
       </div>
     </MagicCard>

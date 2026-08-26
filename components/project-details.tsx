@@ -106,21 +106,40 @@ export function ProjectDetails({ project, open, onOpenChange, onPrev, onNext }: 
                 <DialogDescription className="text-base leading-relaxed">
                   {project.longDescription}
                 </DialogDescription>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  <Button size="sm" nativeButton={false} render={<a href={project.demoUrl} target="_blank" rel="noopener noreferrer" />}>
-                    <ExternalLink data-icon="inline-start" aria-hidden="true" />
-                    Ver demonstração
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    nativeButton={false}
-                    render={<a href={project.githubUrl} target="_blank" rel="noopener noreferrer" />}
-                  >
-                    <Github data-icon="inline-start" aria-hidden="true" />
-                    Ver código
-                  </Button>
-                </div>
+                {(() => {
+                  const previewUrl =
+                    project.previewUrl ||
+                    (project.demoUrl && project.demoUrl !== "#" ? project.demoUrl : undefined)
+                  const hasGithub = Boolean(project.githubUrl && project.githubUrl !== "#")
+
+                  if (!previewUrl && !hasGithub) return null
+
+                  return (
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      {previewUrl ? (
+                        <Button
+                          size="sm"
+                          nativeButton={false}
+                          render={<a href={previewUrl} target="_blank" rel="noopener noreferrer" />}
+                        >
+                          <ExternalLink data-icon="inline-start" aria-hidden="true" />
+                          Demo
+                        </Button>
+                      ) : null}
+                      {hasGithub ? (
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          nativeButton={false}
+                          render={<a href={project.githubUrl} target="_blank" rel="noopener noreferrer" />}
+                        >
+                          <Github data-icon="inline-start" aria-hidden="true" />
+                          Ver código
+                        </Button>
+                      ) : null}
+                    </div>
+                  )
+                })()}
               </header>
 
               <Separator />

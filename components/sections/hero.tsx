@@ -19,15 +19,7 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 z-0 h-128 overflow-hidden mask-[linear-gradient(to_bottom,black,transparent)]"
       >
-        <Meteors
-          number={18}
-          minDelay={0.2}
-          maxDelay={2.4}
-          minDuration={3}
-          maxDuration={7}
-          angle={215}
-          className="bg-primary shadow-[0_0_0_1px_color-mix(in_oklch,var(--primary)_20%,transparent)]"
-        />
+        <Meteors className="bg-primary shadow-[0_0_0_1px_color-mix(in_oklch,var(--primary)_20%,transparent)]" />
       </div>
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 pb-8 pt-28 sm:px-6 lg:flex-row lg:items-center lg:gap-8 lg:pb-12 lg:pt-36">
         <div className="flex max-w-2xl flex-col items-start gap-6 lg:flex-1">
