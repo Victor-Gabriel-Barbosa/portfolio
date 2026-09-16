@@ -186,9 +186,9 @@ Ideias para próximas iterações do projeto:
 Estou aberto a oportunidades, projetos e colaborações.
 
 - 📧 **E-mail:** [victorgabrielbarbosa88@gmail.com](mailto:victorgabrielbarbosa88@gmail.com)
-- 💼 **LinkedIn:** [linkedin.com/in/victor-barbosa](https://linkedin.com/in/victor-barbosa)
+- 💼 **LinkedIn:** [linkedin.com/in/victor-barbosa](https://www.linkedin.com/in/victor-barbosa-83284b334)
 - 🐙 **GitHub:** [github.com/Victor-Gabriel-Barbosa](https://github.com/Victor-Gabriel-Barbosa)
-- 🌐 **Portfólio:** [portfolio-victor-gabriel.vercel.app](https://portfolio-victor-gabriel.vercel.app/)
+- 🌐 **Portfólio:** [portfolio-victor-gabriel.vercel.app](https://portfolio-victor-gabriel.vercel.app)
 
 ## 📄 Licença
 

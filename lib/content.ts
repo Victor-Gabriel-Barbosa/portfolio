@@ -85,6 +85,6 @@ export const highlights = [
 
 export const socials = {
   github: "https://github.com/Victor-Gabriel-Barbosa",
-  linkedin: "https://linkedin.com/in/victor-barbosa",
+  linkedin: "https://www.linkedin.com/in/victor-barbosa-83284b334",
   email: "victorgabrielbarbosa88@gmail.com",
 }
