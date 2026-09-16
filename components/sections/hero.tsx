@@ -21,7 +21,7 @@ export function Hero() {
       >
         <Meteors className="bg-primary shadow-[0_0_0_1px_color-mix(in_oklch,var(--primary)_20%,transparent)]" />
       </div>
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 pb-8 pt-28 sm:px-6 lg:flex-row lg:items-center lg:gap-8 lg:pb-12 lg:pt-36">
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 pb-4 pt-16 sm:px-6 lg:flex-row lg:items-center lg:gap-4 lg:pb-6 lg:pt-20">
         <div className="flex max-w-2xl flex-col items-start gap-6 lg:flex-1">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-3 py-1 text-sm font-medium text-muted-foreground">
