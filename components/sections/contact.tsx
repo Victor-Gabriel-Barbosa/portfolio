@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
 import { Github, Linkedin } from "@/components/brand-icons"
 import { socials } from "@/lib/content"
-import { Mail } from "lucide-react"
+import { FileDown, Mail } from "lucide-react"
 
 export function Contact() {
   return (
@@ -48,6 +48,15 @@ export function Contact() {
               >
                 <Github data-icon="inline-start" aria-hidden="true" />
                 GitHub
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                nativeButton={false}
+                render={<a href={socials.cv} download="CV_Victor_Gabriel_Barbosa.pdf" target="_blank" rel="noopener noreferrer" />}
+              >
+                <FileDown data-icon="inline-start" aria-hidden="true" />
+                Currículo
               </Button>
             </div>
           </div>

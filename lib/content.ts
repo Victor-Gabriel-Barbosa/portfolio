@@ -87,4 +87,5 @@ export const socials = {
   github: "https://github.com/Victor-Gabriel-Barbosa",
   linkedin: "https://www.linkedin.com/in/victor-barbosa-83284b334",
   email: "victorgabrielbarbosa88@gmail.com",
+  cv: "/CV_Victor_Gabriel_Barbosa.pdf",
 }

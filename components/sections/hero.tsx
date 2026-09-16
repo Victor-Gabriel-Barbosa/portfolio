@@ -6,7 +6,7 @@ import { Backlight } from "@/components/ui/backlight"
 import { Reveal } from "@/components/reveal"
 import { socials } from "@/lib/content"
 import { Github, Linkedin } from "@/components/brand-icons"
-import { ArrowDown, ArrowRight, Sparkles } from "lucide-react"
+import { ArrowDown, ArrowRight, FileDown, Sparkles } from "lucide-react"
 
 export function Hero() {
   return (
@@ -76,6 +76,15 @@ export function Hero() {
                   render={<a href={socials.linkedin} target="_blank" rel="noopener noreferrer" />}
                 >
                   <Linkedin aria-hidden="true" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  nativeButton={false}
+                  aria-label="Baixar Currículo"
+                  render={<a href={socials.cv} download="CV_Victor_Gabriel_Barbosa.pdf" target="_blank" rel="noopener noreferrer" />}
+                >
+                  <FileDown aria-hidden="true" />
                 </Button>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { socials } from "@/lib/content"
 import { Github, Linkedin } from "@/components/brand-icons"
-import { Code2, Mail } from "lucide-react"
+import { Code2, FileDown, Mail } from "lucide-react"
 
 const footerLinks = [
   { label: "Início", href: "#inicio" },
@@ -53,6 +53,15 @@ export function Footer() {
               render={<a href={socials.linkedin} target="_blank" rel="noopener noreferrer" />}
             >
               <Linkedin aria-hidden="true" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              nativeButton={false}
+              aria-label="Baixar Currículo"
+              render={<a href={socials.cv} download="CV_Victor_Gabriel_Barbosa.pdf" target="_blank" rel="noopener noreferrer" />}
+            >
+              <FileDown aria-hidden="true" />
             </Button>
             <Button
               variant="ghost"
