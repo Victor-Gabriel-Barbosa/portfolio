@@ -173,6 +173,180 @@ export const projects: Project[] = [
     featured: false,
     year: "2024",
   },
+  {
+    slug: "livesnap",
+    title: "LiveSnap",
+    description:
+      "Extensão para VS Code que rastreia sites inteiros e captura screenshots em alta resolução de cada página, direto do editor.",
+    longDescription:
+      "LiveSnap é uma extensão para o Visual Studio Code que rastreia (crawl) um site a partir de uma URL inicial e tira screenshots em alta resolução de cada página visitada, usando o Playwright para controlar um navegador Chromium. Nasceu como um script Python de linha de comando e foi portado para uma extensão nativa em TypeScript, acessível diretamente pela paleta de comandos do VS Code, com suporte a sessão autenticada para rastrear páginas que exigem login.",
+    problem:
+      "Documentar visualmente um site inteiro — para portfólio, QA visual ou registro de mudanças — normalmente exige abrir e capturar cada página manualmente, um processo lento e repetitivo, especialmente em sites com muitas rotas.",
+    features: [
+      "Rastreamento automático a partir de uma URL inicial, seguindo os links da página",
+      "Screenshots em alta resolução da página inteira ou apenas do viewport",
+      "Controle de domínio, restringindo ou liberando o rastreamento externo",
+      "Limite de páginas e profundidade configuráveis",
+      "Sessão autenticada com perfil persistente do Chromium",
+      "Progresso em tempo real, cancelável, com log detalhado",
+    ],
+    technologies: ["TypeScript", "Playwright", "VS Code Extension API", "Node.js", "esbuild"],
+    challenges: [
+      "Rastrear páginas que exigem autenticação sem comprometer a experiência do usuário",
+      "Lidar com conteúdo de carregamento tardio (lazy loading) antes da captura",
+      "Evitar rastreamentos descontrolados em sites muito grandes",
+    ],
+    solutions: [
+      "Perfil persistente do Chromium para reaproveitar sessões autenticadas (cookies, localStorage, IndexedDB)",
+      "Scroll automático até o final da página antes de cada captura",
+      "Limites configuráveis de profundidade e número máximo de páginas, com progresso cancelável",
+    ],
+    results: [
+      "Publicada no VS Code Marketplace, disponível para instalação direta pelo editor",
+      "Fluxo de captura sem sair do VS Code, com log detalhado no canal de saída",
+      "Suporte a sites que exigem login, ampliando os casos de uso do rastreamento",
+    ],
+    image: "/livesnap_home.jpg",
+    gallery: [
+      { src: "/livesnap_progress.jpg", alt: "Barra de progresso do rastreamento" },
+      { src: "/livesnap_settings.jpg", alt: "Configuração interativa via paleta de comandos" },
+      { src: "/livesnap_output.jpg", alt: "Log no canal de saída do LiveSnap" },
+    ],
+    demoUrl: "https://marketplace.visualstudio.com/items?itemName=VictorGabrielBarbosa.livesnap",
+    githubUrl: "https://github.com/Victor-Gabriel-Barbosa/livesnap",
+    featured: true,
+    year: "2025",
+  },
+  {
+    slug: "musicz",
+    title: "Musicz",
+    description:
+      "Aplicação web de streaming de música com Next.js, consumindo a API da Deezer, com playlists, curtidas, quiz musical e sincronização em nuvem.",
+    longDescription:
+      "Musicz é uma aplicação de streaming construída com Next.js e TypeScript que usa o catálogo público da Deezer para descobrir, ouvir e gerenciar músicas. Oferece playlists personalizadas, sistema de curtidas, um quiz musical interativo, tema claro/escuro e funciona como PWA instalável, com autenticação e sincronização de dados na nuvem via Firebase.",
+    problem:
+      "Ouvir e organizar música a partir de um catálogo público exige ferramentas que unam busca, biblioteca pessoal e sincronização entre dispositivos — algo que APIs abertas como a da Deezer não oferecem prontas para o usuário final.",
+    features: [
+      "Player com fila de reprodução, seek e controle de volume",
+      "Busca de músicas, álbuns, artistas e playlists com debounce",
+      "Biblioteca pessoal com criação, edição e exclusão de playlists",
+      "Quiz musical com 10 rodadas geradas a partir do chart da Deezer",
+      "Autenticação por email/senha e Google via Firebase Auth",
+      "PWA instalável, com tema claro/escuro",
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase", "Deezer API"],
+    challenges: [
+      "Consumir a API pública da Deezer contornando restrições de CORS",
+      "Sincronizar playlists e curtidas em tempo real entre dispositivos",
+      "Manter a experiência funcional para usuários sem conta",
+    ],
+    solutions: [
+      "Proxy interno em Next.js para intermediar as chamadas à API da Deezer",
+      "Firestore para sincronização em tempo real de playlists e curtidas de usuários logados",
+      "Fallback em localStorage para quem navega sem autenticação",
+    ],
+    results: [
+      "Aplicação instalável como PWA, no desktop e no celular",
+      "Quiz musical interativo com pontuação acumulada",
+      "Sincronização em nuvem funcionando junto com uso offline via localStorage",
+    ],
+    image: "/musicz_home.jpg",
+    gallery: [
+      { src: "/musicz_player.jpg", alt: "Player de música do Musicz" },
+      { src: "/musicz_quiz.jpg", alt: "Quiz musical interativo" },
+      { src: "/musicz_library.jpg", alt: "Biblioteca de playlists do usuário" },
+    ],
+    demoUrl: "https://musicz-delta.vercel.app/",
+    githubUrl: "https://github.com/Victor-Gabriel-Barbosa/Musicz",
+    featured: true,
+    year: "2025",
+  },
+  {
+    slug: "pinboard",
+    title: "Pinboard",
+    description:
+      "Pinterest Clone com backend em Java, permitindo criar, organizar em boards e pesquisar pins — projeto final de POO2.",
+    longDescription:
+      "Pinboard é o projeto final da disciplina de Programação Orientada a Objetos II (POO2), uma aplicação inspirada no Pinterest com backend em Java. Permite criar contas, publicar pins com imagem, descrição e tags, organizá-los em boards, salvar pins de outros usuários e pesquisar por tags, título ou descrição.",
+    problem:
+      "Como projeto de conclusão de disciplina, o desafio era aplicar conceitos de orientação a objetos em uma aplicação real e completa, cobrindo desde a modelagem de domínio em Java até a integração com frontend e persistência de dados, inspirada em uma plataforma de curadoria visual como o Pinterest.",
+    features: [
+      "Criação de conta e login",
+      "Criação, visualização, edição e exclusão de pins",
+      "Organização de pins em pastas (boards)",
+      "Salvar pins de outros usuários",
+      "Pesquisa de pins por tags, título ou descrição",
+    ],
+    technologies: ["Java", "Supabase", "HTML", "CSS"],
+    challenges: [
+      "Modelar o domínio (usuários, pins, boards) seguindo boas práticas de orientação a objetos",
+      "Integrar o backend em Java com um frontend e um banco de dados para persistência",
+      "Implementar busca de pins por múltiplos critérios (tags, título, descrição)",
+    ],
+    solutions: [
+      "Arquitetura em camadas aplicando princípios de POO discutidos na disciplina",
+      "Modelagem de entidades dedicadas para pins, boards e usuários",
+      "Persistência de dados integrada ao backend para suportar as operações de CRUD",
+    ],
+    results: [
+      "Aplicação publicada e acessível publicamente",
+      "Projeto final aprovado na disciplina de POO2",
+      "Fluxo completo de criação, organização e descoberta de pins",
+    ],
+    image: "https://github.com/user-attachments/assets/e9ed72e5-f600-4ed6-935b-6a12a6c11d13",
+    gallery: [
+      { src: "https://github.com/user-attachments/assets/3a0f67d0-f6a0-4e70-91fb-2816a611141d", alt: "Feed de pins do Pinboard" },
+      { src: "https://github.com/user-attachments/assets/2ca6f614-d3ce-4558-b38f-08953165e77c", alt: "Detalhe de um pin" },
+      { src: "https://github.com/user-attachments/assets/c3d6e8e4-43ef-4a8e-adf9-de24bfafe7ac", alt: "Organização de pins em boards" },
+    ],
+    demoUrl: "https://pinboard-dw09.onrender.com/",
+    githubUrl: "#",
+    featured: false,
+    year: "2025",
+  },
+  {
+    slug: "promogram-web",
+    title: "Promogram Web",
+    description:
+      "Frontend Angular do Promogram, agregador de ofertas de produtos e cupons de desconto das principais lojas do Brasil.",
+    longDescription:
+      "Promogram Web é o frontend em Angular do Promogram, um agregador de ofertas de produtos e cupons de desconto das principais lojas do Brasil. Consome a API do Promogram Backend para exibir promoções sempre atualizadas, com busca, cópia de cupons em um clique e tema claro/escuro.",
+    problem:
+      "Encontrar as melhores ofertas e cupons de desconto exige checar várias lojas separadamente; o Promogram centraliza essas promoções em um só lugar, sempre atualizadas a partir da API do Promogram Backend.",
+    features: [
+      "Vitrine de produtos e cupons em destaque na página inicial",
+      "Listagem completa de produtos com busca por nome",
+      "Listagem completa de cupons com busca por nome/código",
+      "Cópia de cupons de desconto em um clique",
+      "Tema claro/escuro",
+    ],
+    technologies: ["Angular", "TypeScript", "Angular Material", "Tailwind CSS", "RxJS", "Vitest"],
+    challenges: [
+      "Manter a lista de ofertas sempre atualizada consumindo a API do Promogram Backend",
+      "Combinar RxJS e signals do Angular de forma consistente no fluxo de dados",
+      "Garantir uma experiência de busca fluida em produtos e cupons",
+    ],
+    solutions: [
+      "Uso de toSignal para integrar streams RxJS ao sistema de signals do Angular",
+      "Componentes standalone organizados por página e por serviço de dados",
+      "Skeleton loaders para manter a interface responsiva durante o carregamento",
+    ],
+    results: [
+      "Aplicação em produção na Vercel, consumindo a API em tempo real",
+      "Cobertura de testes unitários com Vitest",
+      "Interface com tema claro/escuro em toda a aplicação",
+    ],
+    image: "/promogram_home.jpg",
+    gallery: [
+      { src: "/promogram_produtos.jpg", alt: "Listagem de produtos com busca" },
+      { src: "/promogram_cupons.jpg", alt: "Listagem de cupons com botão de copiar" },
+      { src: "/promogram_dark.jpg", alt: "Tema escuro do Promogram Web" },
+    ],
+    demoUrl: "https://promogram-web.vercel.app",
+    githubUrl: "https://github.com/Victor-Gabriel-Barbosa/promogram-web",
+    featured: true,
+    year: "2025",
+  },
 ]
 
 export function getProjectBySlug(slug: string): Project | undefined {

@@ -70,8 +70,8 @@ export const timeline: TimelineItem[] = [
 ]
 
 export const stats = [
-  { value: "4", label: "Projetos completos publicados" },
-  { value: "50", label: "Repositórios no GitHub" },
+  { value: "8", label: "Projetos completos publicados" },
+  { value: "80", label: "Repositórios no GitHub" },
   { value: "3", label: "Anos cursando Sistemas de Informação" },
 ]
 
